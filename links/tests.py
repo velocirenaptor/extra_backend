@@ -32,7 +32,7 @@ USERS_QUERY = '''
 
 
 CREATE_LINK_MUTATION = '''
- mutation createLinkMutation($url: String, $description: String) {
+ mutation createLinkMutation($url: String!, $description: String!) {
      createLink(url: $url, description: $description) {
          description
      }
