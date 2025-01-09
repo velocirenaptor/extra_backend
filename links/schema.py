@@ -87,4 +87,3 @@ class Mutation(graphene.ObjectType):
     create_vote = CreateVote.Field()
 
 schema = graphene.Schema(mutation=Mutation)
-

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'graphene_django',
     'links',
     'header',
+    'characters',
     'education',
     'workexperience',
     'skills',
@@ -103,12 +104,17 @@ WSGI_APPLICATION = 'hacker_news.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://postgres:postgres@localhost:5432/mycv',
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'extraordinario',
+        'USER': 'ren0',
+        'PASSWORD': 'leju',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
+
+
 
 
 # Password validation
