@@ -8,5 +8,8 @@ class Character(models.Model):
     picture = models.URLField()
     description = models.TextField(blank=True)
 
+    class Meta:
+        db_table = "characters"
+
     def __str__(self):
         return self.title
